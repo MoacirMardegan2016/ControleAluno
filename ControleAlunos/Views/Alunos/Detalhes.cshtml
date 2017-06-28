@@ -1,0 +1,26 @@
+﻿@model ControleAlunos.Models.Aluno
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Aluno</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeAluno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeAluno)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdAluno }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

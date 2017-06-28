@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ControleAlunos.Models.Aluno>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Alunos</h2>
+
+<p>
+    @Html.ActionLink("Criar Novo Aluno", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeAluno)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeAluno)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdAluno }) |
+            @Html.ActionLink("Detalhes", "Detalhes", new { id=item.IdAluno }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdAluno })
+        </td>
+    </tr>
+}
+
+</table>

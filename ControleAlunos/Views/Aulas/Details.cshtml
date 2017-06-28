@@ -1,0 +1,26 @@
+﻿@model ControleAlunos.Models.Aula
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Aula</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoAula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoAula)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdAula }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
